@@ -41,7 +41,7 @@ uploaded_file = st.file_uploader("Upload an X-ray Image", type=["jpg", "png", "j
 if uploaded_file is not None:
     col1, col2 = st.columns(2)
     with col1:
-        st.image(uploaded_file, caption="Uploaded Image", use_column_width=True)
+        st.image(uploaded_file, caption="Uploaded Image", width=700)
     with col2:
         st.subheader("Model Prediction")
         prediction, confidence = predict_image(uploaded_file)
